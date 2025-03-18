@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестирование</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Тестирование</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Обложка</a></li>
+                    <li><a href="www.html">4.3.1. Всемирная паутина</a></li>
+                    <li><a href="archives.html">4.3.2. Файловые архивы</a></li>
+                    <li><a href="email.html">4.3.3. Электронная почта</a></li>
+                    <li><a href="collaboration.html">4.3.4. Сетевое взаимодействие</a></li>
+                    <li class="chosen"><a href="test.html">Тестирование</a></li>
+                    <li><a href="references.html">Справочные материалы</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section>
+                <h2>Пройдите тест</h2>
+                <form id="quiz-form">
+                    <div class="question">
+                        <p>1. Какой протокол используется для передачи веб-страниц?</p>
+                        <input type="radio" name="q1" value="http"> HTTP<br>
+                        <input type="radio" name="q1" value="ftp"> FTP<br>
+                        <input type="radio" name="q1" value="smtp"> SMTP<br>
+                    </div>
+                    <div class="question">
+                        <p>2. Какой сервис позволяет хранить файлы в облаке?</p>
+                        <input type="radio" name="q2" value="dropbox"> Dropbox<br>
+                        <input type="radio" name="q2" value="irc"> IRC<br>
+                        <input type="radio" name="q2" value="telnet"> Telnet<br>
+                    </div>
+                    <div class="question">
+                        <p>3. Какой протокол используется для отправки электронной почты?</p>
+                        <input type="radio" name="q3" value="smtp"> SMTP<br>
+                        <input type="radio" name="q3" value="pop3"> POP3<br>
+                        <input type="radio" name="q3" value="http"> HTTP<br>
+                    </div>
+                    <div class="question">
+                        <p>4. Какой сервис предназначен для мгновенного обмена сообщениями?</p>
+                        <input type="radio" name="q4" value="messenger"> Messenger<br>
+                        <input type="radio" name="q4" value="ftp"> FTP<br>
+                        <input type="radio" name="q4" value="http"> HTTP<br>
+                    </div>
+                    <div class="question">
+                        <p>5. Что означает аббревиатура VPN?</p>
+                        <input type="radio" name="q5" value="virtual"> Virtual Private Network<br>
+                        <input type="radio" name="q5" value="visual"> Visual Program Node<br>
+                        <input type="radio" name="q5" value="voice"> Voice Protocol Network<br>
+                    </div>
+                    <div class="question">
+                        <p>6. Какой сервис используется для загрузки файлов через торрент?</p>
+                        <input type="radio" name="q6" value="bittorrent"> BitTorrent<br>
+                        <input type="radio" name="q6" value="smtp"> SMTP<br>
+                        <input type="radio" name="q6" value="ftp"> FTP<br>
+                    </div>
+                    <div class="question">
+                        <p>7. Какой порт используется для HTTPS?</p>
+                        <input type="radio" name="q7" value="443"> 443<br>
+                        <input type="radio" name="q7" value="80"> 80<br>
+                        <input type="radio" name="q7" value="21"> 21<br>
+                    </div>
+                    <div class="question">
+                        <p>8. Какой из этих сервисов является почтовым?</p>
+                        <input type="radio" name="q8" value="gmail"> Gmail<br>
+                        <input type="radio" name="q8" value="telegram"> Telegram<br>
+                        <input type="radio" name="q8" value="dropbox"> Dropbox<br>
+                    </div>
+                    <div class="question">
+                        <p>9. Какой протокол отвечает за скачивание файлов?</p>
+                        <input type="radio" name="q9" value="ftp"> FTP<br>
+                        <input type="radio" name="q9" value="smtp"> SMTP<br>
+                        <input type="radio" name="q9" value="irc"> IRC<br>
+                    </div>
+                    <div class="question">
+                        <p>10. Какой сервис предназначен для видеоконференций?</p>
+                        <input type="radio" name="q10" value="zoom"> Zoom<br>
+                        <input type="radio" name="q10" value="ftp"> FTP<br>
+                        <input type="radio" name="q10" value="smtp"> SMTP<br>
+                    </div>
+                    <button type="button" onclick="checkAnswers()">Проверить</button>
+                </form>
+                <div id="results"></div>
+                <div class="controls">
+                    <button onclick="location.href='collaboration.html'">Назад</button>
+                    <button onclick="location.href='references.html'">Справочные материалы</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2023 МУП. Все права защищены.</p>
+    </footer>
+    <script>
+        function checkAnswers() {
+            const correctAnswers = {
+                q1: "http",
+                q2: "dropbox",
+                q3: "smtp",
+                q4: "messenger",
+                q5: "virtual",
+                q6: "bittorrent",
+                q7: "443",
+                q8: "gmail",
+                q9: "ftp",
+                q10: "zoom"
+            };
+            let score = 0;
+            let resultsHTML = "<h3>Результаты:</h3>";
+            
+            for (let key in correctAnswers) {
+                const selected = document.querySelector(`input[name="${key}"]:checked`);
+                if (selected) {
+                    if (selected.value === correctAnswers[key]) {
+                        score++;
+                        resultsHTML += `<p>${key}: ✅ Верно</p>`;
+                    } else {
+                        resultsHTML += `<p>${key}: ❌ Неверно (правильный ответ: ${correctAnswers[key]})</p>`;
+                    }
+                } else {
+                    resultsHTML += `<p>${key}: ❌ Не выбран ответ (правильный: ${correctAnswers[key]})</p>`;
+                }
+            }
+            resultsHTML += `<h4>Итоговый результат: ${score} из 10</h4>`;
+            document.getElementById("results").innerHTML = resultsHTML;
+        }
+    </script>
+</body>
+</html>

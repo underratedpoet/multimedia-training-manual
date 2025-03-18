@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Файловые архивы</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Файловые архивы</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Обложка</a></li>
+                    <li><a href="www.html">4.3.1. Всемирная паутина</a></li>
+                    <li class="chosen"><a href="archives.html">4.3.2. Файловые архивы</a></li>
+                    <li><a href="email.html">4.3.3. Электронная почта</a></li>
+                    <li><a href="collaboration.html">4.3.4. Сетевое взаимодействие</a></li>
+                    <li><a href="test.html">Тестирование</a></li>
+                    <li><a href="references.html">Справочные материалы</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section>
+                <img src="videos/ftp.gif" alt="GIF Animation">
+                <h2>Основы файловых архивов</h2>                
+                
+                <p><strong>В <a href="references.html#internet">Интернете</a> существует множество файловых архивов</strong> — своего рода библиотек, хранящих файлы с программным обеспечением, графикой, музыкой и другой информацией.
+
+                    <strong>Доступ пользователей</strong> к файлам в файловых архивах возможен как по протоколу <a href="references.html#http">HTTP</a>, так и по специальному <a href="references.html#ftp">протоколу передачи файлов FTP</a> (File Transfer Protocol). <a href="references.html#ftp">FTP</a> позволяет подключаться к серверам файловых архивов, просматривать содержимое каталогов и загружать файлы с сервера или на сервер. На тот случай, если передача файла прерывается по каким-либо причинам, <a href="references.html#ftp">протокол FTP</a> предусматривает средства для докачки файла, что бывает очень удобно при передаче больших файлов.
+
+                    <strong>Адрес файла на сервере файлового архива</strong> включает в себя <a href="references.html#protocol">протокол доступа</a> к файлу, <a href="references.html#domain">имя сервера</a> и полное имя файла. Так, если доступ к файлу htm.exe, находящемуся на сервере com.edu, осуществляется по протоколу <a href="references.html#ftp">FTP</a>, его адрес запишется следующим образом:
+                </p>
+
+                <p><code>ftp://com.edu/htm.exe</code></p>
+
+                <p>
+                    <img src="images/ftp.jpg" alt="GIF Animation">
+                    Многие файлы, принимаемые по протоколу <a href="references.html#ftp">FTP</a>, являются <a href="references.html#compression">сжатыми</a>, т. е. уменьшенными в размере. <a href="references.html#compressed_files">Сжатые файлы</a> занимают меньше места на диске, быстрее передаются по сети. Имена таких файлов обычно заканчиваются расширениями <a href="references.html#zip">zip</a>, <a href="references.html#arj">arj</a>, <a href="references.html#rar">rar</a> и другими в зависимости от типа <a href="references.html#archiver">программы-архиватора</a>, в котором они были созданы. После копирования <a href="references.html#compressed_files">сжатого файла</a> его следует <a href="references.html#decompression">распаковать</a>, т. е. восстановить его первоначальный вид.
+                </p>
+                <h2>Прослушайте аудиоурок</h2>
+                <!-- Текстовое и аудио окно -->
+                <div class="text-audio">
+                    <audio controls>
+                        <source src="audio/ftp.mp3" type="audio/mpeg">
+                        Ваш браузер не поддерживает аудио.
+                    </audio>
+                </div>
+
+                <div class="controls">
+                    <button onclick="location.href='www.html'">Назад</button>
+                    <button onclick="location.href='email.html'">Вперед</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2023 МУП. Все права защищены.</p>
+    </footer>
+</body>
+</html>

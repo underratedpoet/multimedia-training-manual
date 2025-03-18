@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Всемирная паутина</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Всемирная паутина</h1>
+    </header>
+    
+
+    <div class="container">
+        
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Обложка</a></li>
+                    <li class="chosen"><a href="www.html">4.3.1. Всемирная паутина</a></li>
+                    <li><a href="archives.html">4.3.2. Файловые архивы</a></li>
+                    <li><a href="email.html">4.3.3. Электронная почта</a></li>
+                    <li><a href="collaboration.html">4.3.4. Сетевое взаимодействие</a></li>
+                    <li><a href="test.html">Тестирование</a></li>
+                    <li><a href="references.html">Справочные материалы</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <img width="400" src="images/www.png" alt="WWW">
+            <section>
+                <h2>Основы WWW</h2>
+                <p><strong>Всемирная паутина, или <a href="references.html#www">WWW</a> — это сервис, с помощью которого пользователи сети получают доступ к информационным ресурсам, хранящимся на компьютерах в разных частях света.</strong> Основой WWW являются веб-страницы и веб-сайты, на которых информация представлена в виде гипертекстовых и гипермедийных документов.
+
+                    Вы уже неоднократно путешествовали по Всемирной паутине с помощью браузеров, осуществляя переходы по гиперссылкам; искали ответы на интересующие вас вопросы с помощью поисковых систем по ключевым словам.
+                </p>    
+                    <hr>
+                <p>
+                    <strong>Задача 1.</strong> Даны запросы к поисковому серверу. Для обозначения логической операции ИЛИ в запросах используется символ |, а для логической операции И — символ &.
+                </p>
+                <ol>
+                    <li>Франция | Испания | История</li>
+                    <li>Франция & Карта & История</li>
+                    <li>Франция | История</li>
+                    <li>Франция & История</li>
+                </ol>
+                <p>Изобразите графически количество страниц, которые найдёт поисковый сервер по каждому запросу. Расположите номера запросов в порядке убывания количества страниц, которые найдёт поисковый сервер по каждому запросу.
+                    <strong>Решение</strong>
+                    Изобразим результаты выполнения запросов графически — с помощью кругов Эйлера:
+                    <img width="400" src="images/euler.png" alt="Круги Эйлера">
+                    Ещё одна <strong>возможность поиска</strong> нужного документа в Интернете — это <strong>использование адреса документа</strong>.
+                    <strong>Адрес документа в Интернете — его <a href="references.html#url">URL</a> (Uniform Resource Locator — универсальный указатель ресурса) состоит из следующих частей:</strong>
+                </p>
+                <ul>
+                    <li>название протокола со знаками :// в конце названия (<a href="references.html#http">HTTP</a>);</li>
+                    <li>доменное имя сервера со знаком / в конце имени (<a href="references.html#domain">Доменное имя</a>);</li>
+                    <li>полное имя файла на сервере, где он находится.</li>
+                </ul>
+                <hr>
+                <p>
+                    <strong>Рассмотрим пример адреса (URL):</strong>
+                    
+                    <code><strong>http:</strong>//fcior.edu.ru/card/701/algebraicheskie-uravneniya.html</code>
+                    
+                    <strong>Первая часть адреса — это имя протокола</strong>. Оно определяет тип документа. Запись http:// указывает на то, что это веб-страница. Протокол <a href="references.html#http">HTTP</a> — Hyper Text Transfer Protocol — протокол передачи гипертекстовых файлов. Для других типов документов протоколы могут быть другими.
+                    <img width="400" src="images/http.jpg" alt="HTTP">
+                    <strong>Вторая часть адреса</strong> — это доменное имя сервера, на котором хранится страница:
+                    
+                    <code>http://<strong>fcior.edu.ru</strong>/701/algebraicheskie-uravneniya.html</code>
+                    
+                    Третья часть адреса — полное имя файла, включающее путь к файлу, т. е. все каталоги, в которые следует последовательно зайти, чтобы открыть требуемый файл.
+                    
+                    <code>//fcior.edu.ru/<strong>card/701/algebraicheskie-uravneniya.html</strong></code>
+                </p>
+                <hr>
+                <p>    
+                    <strong>Задача 2.</strong> Доступ к файлу ftp.net, находящемуся на сервере txt.org, осуществляется по протоколу http. В таблице фрагменты адреса файла закодированы буквами от А до Ж. Запишите адрес указанного файла в сети Интернет и последовательность букв, кодирующую этот адрес.
+                    <img width="200" src="images/letters.png" alt="Буквы">
+                    <strong>Решение</strong>
+                    <strong>Первая часть адреса файла</strong> — название протокола:
+                    <img width="400" src="images/letters1.png" alt="Буквы">
+                    <strong>Вторая часть адреса</strong> — имя сервера (компьютера, на котором размещён файл):
+                    <img width="400" src="images/letters2.png" alt="Буквы">
+                    <strong>Третья часть адреса</strong> — полное имя файла на компьютере:
+                    <img width="400" src="images/letters3.png" alt="Буквы">
+                    <strong>Ответ:</strong> http://txt.org/ftp.net, ГВЖЕДБА.
+                </p>
+                <hr>
+                
+                <h2>Просмотрите видеоурок</h2>
+                <video controls>
+                    <source src="videos/www.mp4" type="video/mp4">
+                </video>
+                <!--<div class="controls">
+                    <button onclick="location.href='email_comments.html'">Комментарии</button>
+                    <button onclick="location.href='email_glossary.html'">Глоссарий</button>
+                    <button onclick="location.href='test.html'">Тестирование</button>
+                </div>-->
+                <div class="controls">
+                    <button onclick="location.href='index.html'">Назад</button>
+                    <button onclick="location.href='archives.html'">Вперед</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2023 МУП. Все права защищены.</p>
+    </footer>
+</body>
+</html>
